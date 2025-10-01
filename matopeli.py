@@ -77,8 +77,6 @@ class SnakeGame(QGraphicsView):
                          (GRID_HEIGHT * CELL_SIZE) / 2 + 20)
             return
         
-
-        
         self.snake.insert(0, new_head)
 
         if new_head == self.food:
@@ -87,15 +85,10 @@ class SnakeGame(QGraphicsView):
         else:
             self.snake.pop()
             
-
         if self.score == self.level_limit:
             self.level_limit += 1
             self.timer_delay *= 0.9
             self.timer.setInterval(self.timer_delay)
-                    
-        
-
-    
 
         self.print_game()
 
