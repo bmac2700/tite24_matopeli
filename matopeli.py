@@ -5,8 +5,9 @@ import winsound
 from PySide6.QtWidgets import QApplication, QGraphicsView, QGraphicsScene, QMenu
 from PySide6.QtGui import QPainter, QPen, QBrush, QFont
 from PySide6.QtCore import Qt, QTimer
-
+from PySide6.QtGui import QIcon
 # vakiot
+
 CELL_SIZE = 20
 GRID_WIDTH = 20
 GRID_HEIGHT = 15
@@ -18,9 +19,12 @@ class SnakeGame(QGraphicsView):
         self.setScene(QGraphicsScene(self))
         self.setRenderHint(QPainter.Antialiasing)
         self.setSceneRect(0, 0, CELL_SIZE * GRID_WIDTH, CELL_SIZE * GRID_HEIGHT)
+        
 
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.update_game)
+
+        self.setWindowIcon(QIcon("snake.png")) 
 
         self.game_started = False
         self.init_screen()
@@ -134,7 +138,7 @@ class SnakeGame(QGraphicsView):
 
 def main():
     app = QApplication(sys.argv)
-    game = SnakeGame()
+    game = SnakeGame() 
     game.show()
     sys.exit(app.exec())
 
