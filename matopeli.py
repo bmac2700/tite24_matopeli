@@ -24,6 +24,8 @@ class SnakeGame(QGraphicsView):
 
         self.game_started = False
         self.init_screen()
+        self.setWindowTitle("Matopeli")
+
 
     def keyPressEvent(self, event):
         key = event.key()
