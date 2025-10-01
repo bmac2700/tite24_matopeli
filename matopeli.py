@@ -28,6 +28,8 @@ class SnakeGame(QGraphicsView):
 
         self.game_started = False
         self.init_screen()
+        self.setWindowTitle("Matopeli")
+
 
     def keyPressEvent(self, event):
         key = event.key()
@@ -72,7 +74,7 @@ class SnakeGame(QGraphicsView):
 
             # Game over text
             self.scene().clear()
-            text1 = self.scene().addText("Game Over", QFont("Arial", 24))
+            text1 = self.scene().addText("Game Over", QFont("Perpetua Titling MT Bold", 24))
             text2 = self.scene().addText("Press any key to start new game", QFont("Arial", 14))
 
             # Keskitetään tekstit
