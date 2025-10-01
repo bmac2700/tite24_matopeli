@@ -68,7 +68,7 @@ class SnakeGame(QGraphicsView):
 
             # Game over text
             self.scene().clear()
-            text1 = self.scene().addText("Game Over", QFont("Arial", 24))
+            text1 = self.scene().addText("Game Over", QFont("Perpetua Titling MT Bold", 24))
             text2 = self.scene().addText("Press any key to start new game", QFont("Arial", 14))
 
             # Keskitetään tekstit
